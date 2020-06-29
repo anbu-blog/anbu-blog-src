@@ -2,7 +2,7 @@ layout 'layout/main.tpl', true,
         projects: projects,
         bodyContents: contents {
 
-            published_posts[0..2].each { post ->
+            published_posts.take(3).each { post ->
                 model.put('post', post)
                 include template: 'post-brick.tpl'
             }
