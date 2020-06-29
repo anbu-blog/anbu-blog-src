@@ -11,4 +11,9 @@ To generate site contents in target directory named github/ from current
 directory.
 
     jbake -b . github/
+    
+    ( cd github/ && \
+    git add -A && \
+    git commit -m "newly rendered blog on $(date)" && \
+    git push )
 
